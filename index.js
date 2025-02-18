@@ -5,7 +5,7 @@ const cors = require('cors');
 const { Server } = require('socket.io');
 const http = require('http');
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const jwt = require('jsonwebtoken');
 const SECRET_KEY = 'tu_clave_secreta_super_segura'; // Cambia esta clave por algo único y seguro
 const VALID_USER = {
@@ -240,5 +240,5 @@ app.post('/api/products/enable-all', authenticateJWT, (req, res) => {
 });
 // Iniciar el servidor 
 server.listen(PORT, () => {
-  console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
+  console.log(`Servidor ejecutándose en Puerto ${PORT}`);
 });
