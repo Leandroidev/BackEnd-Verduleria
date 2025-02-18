@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "build": "npm run build",
+    "build": "node index.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
